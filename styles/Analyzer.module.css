@@ -1,0 +1,255 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0f1e 0%, #1a0033 100%);
+  padding: 40px 20px;
+  color: #fff;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.header h1 {
+  font-size: 48px;
+  font-weight: 900;
+  background: linear-gradient(90deg, #ff00ff, #00ffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 18px;
+  color: #aaa;
+}
+
+.inputSection {
+  display: flex;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.input {
+  flex: 1;
+  padding: 14px 20px;
+  background: rgba(255, 0, 255, 0.1);
+  border: 2px solid #ff00ff;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #00ffff;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button {
+  padding: 14px 30px;
+  background: linear-gradient(90deg, #ff00ff, #00ffff);
+  border: none;
+  border-radius: 10px;
+  color: #000;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 16px;
+}
+
+.button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.4);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  padding: 20px;
+  background: rgba(255, 0, 0, 0.2);
+  border: 2px solid #ff0000;
+  border-radius: 10px;
+  color: #ff6666;
+  text-align: center;
+  font-weight: 900;
+}
+
+.results {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.card {
+  background: rgba(255, 0, 255, 0.1);
+  border: 2px solid #ff00ff;
+  border-radius: 15px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.card h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #00ffff;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.infoGrid > div {
+  padding: 15px;
+  background: rgba(0, 255, 255, 0.1);
+  border-radius: 10px;
+  border: 1px solid #00ffff;
+}
+
+.infoGrid label {
+  display: block;
+  font-size: 12px;
+  color: #00ffff;
+  margin-bottom: 5px;
+  font-weight: 900;
+}
+
+.infoGrid p {
+  font-size: 16px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.scoreContainer {
+  position: relative;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.scoreBar {
+  height: 100%;
+  transition: width 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scoreText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 900;
+  font-size: 16px;
+  color: #000;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.risks {
+  border-color: #ff0000;
+  background: rgba(255, 0, 0, 0.1);
+}
+
+.risks h2 {
+  color: #ff6666;
+}
+
+.risks ul {
+  list-style: none;
+  padding: 0;
+}
+
+.risks li {
+  padding: 10px;
+  margin: 5px 0;
+  background: rgba(255, 0, 0, 0.2);
+  border-radius: 5px;
+  border-left: 4px solid #ff0000;
+}
+
+.greenFlags {
+  border-color: #00ff00;
+  background: rgba(0, 255, 0, 0.1);
+}
+
+.greenFlags h2 {
+  color: #00ff00;
+}
+
+.greenFlags ul {
+  list-style: none;
+  padding: 0;
+}
+
+.greenFlags li {
+  padding: 10px;
+  margin: 5px 0;
+  background: rgba(0, 255, 0, 0.2);
+  border-radius: 5px;
+  border-left: 4px solid #00ff00;
+}
+
+.holderInfo {
+  color: #00ffff;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.holdersList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.holder {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  background: rgba(0, 255, 255, 0.1);
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.holder span:first-child {
+  color: #00ffff;
+  font-family: monospace;
+}
+
+.holder span:last-child {
+  color: #ff00ff;
+  font-weight: 900;
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 32px;
+  }
+
+  .inputSection {
+    flex-direction: column;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+}
